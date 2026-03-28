@@ -23,7 +23,7 @@
   align-content: stretch;
 }
 .work-flex {
-  width: 100%;
+  width: fit-content;
   display: flex;
   height: auto;
   margin-left: -80px;
