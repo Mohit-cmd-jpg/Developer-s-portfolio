@@ -145,8 +145,14 @@ export function setAllTimeline() {
   careerTimeline
     .fromTo(
       ".career-timeline",
-      { height: "10%" },
-      { height: "100%", duration: 1 },
+      { scaleY: 0.1 },
+      { scaleY: 1, duration: 1, transformOrigin: "top center" },
+      0
+    )
+    .fromTo(
+      ".career-dot",
+      { top: "10%" },
+      { top: "100%", duration: 1 },
       0
     )
 
