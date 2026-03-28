@@ -1,14 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import "./styles/Navbar.css";
+import { HiMenuAlt4, HiX } from "react-icons/hi";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -23,7 +26,7 @@ const Navbar = () => {
     smoother.scrollTop(0);
     smoother.paused(true);
 
-    let links = document.querySelectorAll(".header ul a");
+    let links = document.querySelectorAll(".nav-links a");
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
@@ -31,7 +34,7 @@ const Navbar = () => {
           e.preventDefault();
           let elem = e.currentTarget as HTMLAnchorElement;
           let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
+          if (section) smoother.scrollTo(section, true, "top top");
         }
       });
     });
@@ -52,29 +55,38 @@ const Navbar = () => {
         >
           mohitbindal106@gmail.com
         </a>
-        <ul>
+        <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} data-cursor="disable">
+          <HiMenuAlt4 size={28} />
+        </div>
+      </div>
+
+      <div className={`side-menu ${menuOpen ? "open" : ""}`}>
+        <div className="side-menu-close" onClick={() => setMenuOpen(false)} data-cursor="disable">
+          <HiX size={32} />
+        </div>
+        <ul className="nav-links">
           <li>
-            <a data-href="#about" href="#about">
+            <a data-href="#about" href="#about" onClick={() => setMenuOpen(false)}>
               <HoverLinks text="ABOUT" />
             </a>
           </li>
           <li>
-            <a data-href="#whatido" href="#whatido">
+            <a data-href="#whatido" href="#whatido" onClick={() => setMenuOpen(false)}>
               <HoverLinks text="WHAT I DO" />
             </a>
           </li>
           <li>
-            <a data-href="#work" href="#work">
+            <a data-href="#work" href="#work" onClick={() => setMenuOpen(false)}>
               <HoverLinks text="WORK" />
             </a>
           </li>
           <li>
-            <a data-href="#education" href="#education">
+            <a data-href="#education" href="#education" onClick={() => setMenuOpen(false)}>
               <HoverLinks text="EDUCATION" />
             </a>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
+            <a data-href="#contact" href="#contact" onClick={() => setMenuOpen(false)}>
               <HoverLinks text="CONTACT" />
             </a>
           </li>
