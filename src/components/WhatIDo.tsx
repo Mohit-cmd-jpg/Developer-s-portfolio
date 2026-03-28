@@ -87,21 +87,18 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Frontend & Full Stack</h4>
+              <h3>ENGINEER</h3>
+              <h4>Software & AI Architect</h4>
               <p>
-                I build scalable, high-performance web applications using modern frameworks and databases. Specializing in creating robust single-page applications and responsive interfaces.
+                I architect scalable full-stack applications and secure Web3 platforms. By accelerating traditional workflows and leveraging AI coding tools (Claude, Gemini, OpenAI, etc.), I build robust systems up to 10x faster without compromising on modern architecture.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">Tailwind CSS</div>
+                <div className="what-tags">System Architecture</div>
+                <div className="what-tags">Full Stack Development</div>
+                <div className="what-tags">AI Integrations</div>
+                <div className="what-tags">Web3 Solutions</div>
+                <div className="what-tags">Rapid Prototyping</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -125,22 +122,93 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>ENGINEER</h3>
-              <h4>AI & Web3 Systems</h4>
+              <h3>TECHNICAL</h3>
+              <h4>Core Technologies</h4>
               <p>
-                I architect intelligent backend services and secure decentralized platforms. Focused on integrating Large Language Models and building blockchain-based applications for modern solutions.
+                Proficient in modern programming languages and state-of-the-art frameworks. I write clean, maintainable code focusing on highly optimized execution across the entire development stack.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
+                <div className="what-tags">JavaScript/TypeScript</div>
                 <div className="what-tags">Python</div>
+                <div className="what-tags">C++</div>
+                <div className="what-tags">React & Next.js</div>
+                <div className="what-tags">Node.js</div>
+                <div className="what-tags">MongoDB</div>
+                <div className="what-tags">SQL</div>
                 <div className="what-tags">Flask</div>
-                <div className="what-tags">LLMs</div>
-                <div className="what-tags">OpenAI API</div>
-                <div className="what-tags">Google Gemini</div>
-                <div className="what-tags">Web3</div>
-                <div className="what-tags">Ethereum</div>
-                <div className="what-tags">IPFS (Pinata)</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>WORKFLOW</h3>
+              <h4>Soft Skills & Frameworks</h4>
+              <p>
+                Adept at agile collaboration, technical communication, and iterative problem-solving. Highly experienced with modern deployment pipelines and industry-standard version control workflows.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Git & GitHub</div>
+                <div className="what-tags">Vercel</div>
                 <div className="what-tags">Supabase</div>
+                <div className="what-tags">Cursor/Copilot</div>
+                <div className="what-tags">Team Collaboration</div>
+                <div className="what-tags">Problem Solving</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 3)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>INTERESTS</h3>
+              <h4>Hobbies & Passion</h4>
+              <p>
+                Outside of architecting systems, I am deeply passionate about continuously learning new technologies, participating in community hackathons, exploring open-source, and reading about emerging AI trends.
+              </p>
+              <h5>Interests</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Open Source</div>
+                <div className="what-tags">Hackathons</div>
+                <div className="what-tags">Tech Blogging</div>
+                <div className="what-tags">Continuous Learning</div>
+                <div className="what-tags">Reading</div>
+                <div className="what-tags">AI Tinkering</div>
               </div>
               <div className="what-arrow"></div>
             </div>
