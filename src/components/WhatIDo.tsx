@@ -100,7 +100,6 @@ const WhatIDo = () => {
                 <div className="what-tags">Web3 Solutions</div>
                 <div className="what-tags">Rapid Prototyping</div>
               </div>
-              <div className="what-arrow"></div>
             </div>
           </div>
           <div
@@ -138,7 +137,6 @@ const WhatIDo = () => {
                 <div className="what-tags">SQL</div>
                 <div className="what-tags">Flask</div>
               </div>
-              <div className="what-arrow"></div>
             </div>
           </div>
           <div
@@ -174,7 +172,6 @@ const WhatIDo = () => {
                 <div className="what-tags">Reading</div>
                 <div className="what-tags">AI Tinkering</div>
               </div>
-              <div className="what-arrow"></div>
             </div>
           </div>
         </div>
