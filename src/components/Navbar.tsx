@@ -56,41 +56,43 @@ const Navbar = () => {
           mohitbindal106@gmail.com
         </a>
         <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} data-cursor="disable">
-          <HiMenuAlt4 size={28} />
+          {menuOpen ? <HiX size={28} /> : <HiMenuAlt4 size={28} />}
         </div>
-      </div>
-
-      <div className={`side-menu ${menuOpen ? "open" : ""}`}>
-        <div className="side-menu-close" onClick={() => setMenuOpen(false)} data-cursor="disable">
-          <HiX size={32} />
+        
+        <div className={`side-menu ${menuOpen ? "open" : ""}`}>
+          <ul className="nav-links">
+            <li>
+              <a data-href="#landingDiv" href="#landingDiv" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="HOME" />
+              </a>
+            </li>
+            <li>
+              <a data-href="#about" href="#about" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="ABOUT" />
+              </a>
+            </li>
+            <li>
+              <a data-href="#whatido" href="#whatido" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="WHAT I DO" />
+              </a>
+            </li>
+            <li>
+              <a data-href="#work" href="#work" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="WORK" />
+              </a>
+            </li>
+            <li>
+              <a data-href="#education" href="#education" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="EDUCATION" />
+              </a>
+            </li>
+            <li>
+              <a data-href="#contact" href="#contact" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="CONTACT" />
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul className="nav-links">
-          <li>
-            <a data-href="#about" href="#about" onClick={() => setMenuOpen(false)}>
-              <HoverLinks text="ABOUT" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#whatido" href="#whatido" onClick={() => setMenuOpen(false)}>
-              <HoverLinks text="WHAT I DO" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#work" href="#work" onClick={() => setMenuOpen(false)}>
-              <HoverLinks text="WORK" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#education" href="#education" onClick={() => setMenuOpen(false)}>
-              <HoverLinks text="EDUCATION" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#contact" href="#contact" onClick={() => setMenuOpen(false)}>
-              <HoverLinks text="CONTACT" />
-            </a>
-          </li>
-        </ul>
       </div>
 
       <div className="landing-circle1"></div>
