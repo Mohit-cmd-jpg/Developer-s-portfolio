@@ -9,8 +9,9 @@ const Career = () => {
           <br /> Certifications
         </h2>
         <div className="career-info">
-          <div className="career-timeline"></div>
-          <div className="career-dot"></div>
+          <div className="career-timeline">
+            <div className="career-dot"></div>
+          </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">

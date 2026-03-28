@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Hi! I'm Mohit, a driven software engineer and third-year Computer Science student specializing in scalable web applications and AI solutions. I bridge modern frameworks like React and Node.js with advanced LLMs to transform complex challenges into clean, efficient code. I constantly thrive on problem-solving and focus entirely on architectures that deliver an intuitive, high-performance end-user experience.
+          Hi, I'm Mohit! I'm a passionate software developer and third-year Computer Science student focused on building highly scalable web applications. I specialize in React, Node.js, TypeScript, and rapidly integrating advanced LLMs. I love turning complex logic into performant, intuitive, and fluid digital experiences.
         </p>
       </div>
     </div>
