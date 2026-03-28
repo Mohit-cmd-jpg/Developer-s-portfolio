@@ -65,15 +65,21 @@ const Work = () => {
         const response = await fetch('https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=Mohit-cmd-jpg');
         const data: PinnedRepo[] = await response.json();
         
+const customImages: Record<string, string> = {
+          "University-Placement-Management-System": "https://raw.githubusercontent.com/Mohit-cmd-jpg/University-Placement-Management-System/main/docs/assets/screenshots/Frontpage.png",
+          "secure-file-sharing": "https://raw.githubusercontent.com/Mohit-cmd-jpg/secure-file-sharing/main/docs/images/Frontpage.png",
+          "hrms-lite": "https://raw.githubusercontent.com/Mohit-cmd-jpg/hrms-lite/main/public/screenshots/Dashboard.png"
+        };
+
         const formattedProjects = data.map(repo => ({
           title: repo.repo.replace(/-/g, ' '),
           category: repo.language || "Open Source",
           tools: repo.language || "Multiple",
-          desc: repo.description || "View repository for more details.",
+          desc: repo.description || "View repository for more details.",        
           link: repo.website || repo.link,
           github: repo.link,
           website: repo.website,
-          image: repo.image
+          image: customImages[repo.repo] || repo.image
         }));
         
         setProjects(formattedProjects);
