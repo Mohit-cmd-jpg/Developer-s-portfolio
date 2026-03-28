@@ -73,20 +73,23 @@ export function initialFX() {
   );
 
   var landingText3 = new SplitText(".landing-h2-info-1", TextProps);
+  var landingText3b = new SplitText(".landing-h2-info-2", TextProps);
   var landingText4 = new SplitText(".landing-h2-1", TextProps);
   var landingText5 = new SplitText(".landing-h2-2", TextProps);
+  var landingText5b = new SplitText(".landing-h2-3", TextProps);
 
-  LoopText(landingText2, landingText3);
-  LoopText(landingText4, landingText5);
+  LoopText3(landingText2, landingText3, landingText3b);
+  LoopText3(landingText4, landingText5, landingText5b);
 }
 
-function LoopText(Text1: SplitText, Text2: SplitText) {
+function LoopText3(Text1: SplitText, Text2: SplitText, Text3: SplitText) {
   var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
   const delay = 4;
-  const delay2 = delay * 2 + 1;
+  const delay2 = delay + 1.5;
+  const delay3 = delay2 + 1.5;
 
   tl.fromTo(
-    Text2.chars,
+    Text1.chars,
     { opacity: 0, y: 80 },
     {
       opacity: 1,
@@ -100,37 +103,64 @@ function LoopText(Text1: SplitText, Text2: SplitText) {
   )
     .fromTo(
       Text1.chars,
-      { y: 80 },
-      {
-        duration: 1.2,
-        ease: "power3.inOut",
-        y: 0,
-        stagger: 0.1,
-        delay: delay2,
-      },
-      1
-    )
-    .fromTo(
-      Text1.chars,
       { y: 0 },
       {
         y: -80,
         duration: 1.2,
         ease: "power3.inOut",
         stagger: 0.1,
-        delay: delay,
+        delay: delay2,
       },
       0
     )
-    .to(
+    .fromTo(
       Text2.chars,
+      { opacity: 0, y: 80 },
+      {
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.inOut",
+        y: 0,
+        stagger: 0.1,
+        delay: delay2,
+      },
+      0
+    )
+    .fromTo(
+      Text2.chars,
+      { y: 0 },
       {
         y: -80,
         duration: 1.2,
         ease: "power3.inOut",
         stagger: 0.1,
-        delay: delay2,
+        delay: delay3,
       },
-      1
+      0
+    )
+    .fromTo(
+      Text3.chars,
+      { opacity: 0, y: 80 },
+      {
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.inOut",
+        y: 0,
+        stagger: 0.1,
+        delay: delay3,
+      },
+      0
+    )
+    .fromTo(
+      Text3.chars,
+      { y: 0 },
+      {
+        y: -80,
+        duration: 1.2,
+        ease: "power3.inOut",
+        stagger: 0.1,
+        delay: delay + 4.5,
+      },
+      0
     );
 }
