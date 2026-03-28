@@ -4,6 +4,7 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 gsap.registerPlugin(useGSAP);
 
@@ -36,6 +37,8 @@ const Work = () => {
           tools: repo.language || "Multiple",
           desc: repo.description || "View repository for more details.",
           link: repo.website || repo.link,
+          github: repo.link,
+          website: repo.website,
           image: repo.image
         }));
         
@@ -49,28 +52,36 @@ const Work = () => {
             category: "MERN + Web3",
             tools: "React, Express, MongoDB, Ethereum, IPFS (Pinata)",
             desc: "Secure file sharing platform utilizing IPFS storage and blockchain verification with JWT authentication.",
-            link: "https://secure-file-sharing-nu.vercel.app/login"
+            link: "https://secure-file-sharing-nu.vercel.app/login",
+            github: "https://github.com/Mohit-cmd-jpg/secure-file-sharing",
+            website: "https://secure-file-sharing-nu.vercel.app/login"
           },
           {
             title: "University Placement System",
             category: "Full Stack Web",
             tools: "JavaScript, React, Node.js, MongoDB",
             desc: "A centralized digital placement portal to manage student data, track eligibility, and schedule interviews.",
-            link: "https://github.com/Mohit-cmd-jpg/University-Placement-Management-System"
+            link: "https://github.com/Mohit-cmd-jpg/University-Placement-Management-System",
+            github: "https://github.com/Mohit-cmd-jpg/University-Placement-Management-System",
+            website: "https://uniplacements.vercel.app"
           },
           {
             title: "ChaiBuddy",
             category: "AI Chat Assistant",
             tools: "JavaScript, Flask, Google Generative AI",
             desc: "AI-powered chat assistant built using Flask backend and Google Gemini LLM API.",
-            link: "https://github.com/Mohit-cmd-jpg/ChaiBuddy"
+            link: "https://github.com/Mohit-cmd-jpg/ChaiBuddy",
+            github: "https://github.com/Mohit-cmd-jpg/ChaiBuddy",
+            website: "https://chaibuddy-chatbot.vercel.app"
           },
           {
             title: "HRMS Lite",
             category: "Frontend & BaaS",
             tools: "Next.js, Supabase",
             desc: "Minimal, production-ready Human Resource Management System for managing employee records and attendance.",
-            link: "https://github.com/Mohit-cmd-jpg/hrms-lite"
+            link: "https://github.com/Mohit-cmd-jpg/hrms-lite",
+            github: "https://github.com/Mohit-cmd-jpg/hrms-lite",
+            website: "https://hrms-eta-five.vercel.app"
           }
         ]);
       } finally {
@@ -136,6 +147,18 @@ const Work = () => {
                 <h4>Tools and features</h4>
                 <p>{project.tools}</p>
                 <p style={{ marginTop: '10px', fontSize: '0.9rem', color: '#ccc' }}>{project.desc}</p>
+                <div style={{ display: 'flex', gap: '15px', marginTop: '30px', flexWrap: 'wrap' }}>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer" className="work-action-btn github-btn" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', borderRadius: '30px', fontSize: '14px', transition: 'all 0.3s ease', background: 'rgba(255,255,255,0.05)' }}>
+                      <FaGithub size={18} /> GitHub
+                    </a>
+                  )}
+                  {project.website && (
+                    <a href={project.website} target="_blank" rel="noreferrer" className="work-action-btn live-btn" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#000', textDecoration: 'none', backgroundColor: '#fff', padding: '10px 20px', borderRadius: '30px', fontSize: '14px', transition: 'all 0.3s ease', fontWeight: 500 }}>
+                      <FaExternalLinkAlt size={16} /> Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
               <a href={project.link} target="_blank" rel="noreferrer" style={{display: 'block', height: '100%', width: '100%'}}>
                  <WorkImage image={project.image || "/images/placeholder.webp"} alt={project.title} />
