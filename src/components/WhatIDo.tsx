@@ -60,7 +60,7 @@ const WhatIDo = () => {
           </div>
           <div
             className="what-content what-noTouch"
-            ref={(el) => setRef(el, 0)}
+            ref={(el) => setRef(el, 2)}
           >
             <div className="what-border1">
               <svg height="100%">
@@ -144,42 +144,6 @@ const WhatIDo = () => {
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 2)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
-              <h3>WORKFLOW</h3>
-              <h4>Soft Skills & Frameworks</h4>
-              <p>
-                Adept at agile collaboration, technical communication, and iterative problem-solving. Highly experienced with modern deployment pipelines and industry-standard version control workflows.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">Git & GitHub</div>
-                <div className="what-tags">Vercel</div>
-                <div className="what-tags">Supabase</div>
-                <div className="what-tags">Cursor/Copilot</div>
-                <div className="what-tags">Team Collaboration</div>
-                <div className="what-tags">Problem Solving</div>
-              </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 3)}
           >
             <div className="what-border1">
               <svg height="100%">
