@@ -28,8 +28,6 @@ const Skills = () => {
               <span>Node.js</span>
               <span>Express.js</span>
               <span>Tailwind CSS</span>
-              <span>GSAP</span>
-              <span>Three.js</span>
             </div>
           </div>
           
