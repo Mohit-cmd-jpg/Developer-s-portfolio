@@ -25,12 +25,22 @@ const Skills = () => {
             <div className="skill-tags">
               <span>React.js</span>
               <span>Next.js</span>
-              <span>Node.js</span>
-              <span>Express.js</span>
+              <span>Node.js / Express</span>
               <span>Tailwind CSS</span>
             </div>
           </div>
-          
+
+          <div className="skills-card">
+            <h3>AI & ML</h3>
+            <div className="skill-tags">
+              <span>LangChain</span>
+              <span>OpenAI API</span>
+              <span>Pandas / NumPy</span>
+              <span>PyTorch</span>
+              <span>RAG</span>
+            </div>
+          </div>
+
           <div className="skills-card">
             <h3>Tools/Platform</h3>
             <div className="skill-tags">
@@ -38,8 +48,8 @@ const Skills = () => {
               <span>MongoDB</span>
               <span>MySQL</span>
               <span>Firebase</span>
-              <span>Postman</span>
-              <span>Vercel / Render</span>
+              <span>Docker</span>
+              <span>Vercel / AWS</span>
             </div>
           </div>
         </div>

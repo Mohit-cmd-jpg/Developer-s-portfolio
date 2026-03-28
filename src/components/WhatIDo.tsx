@@ -88,17 +88,17 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>ENGINEER</h3>
-              <h4>Software & AI Architect</h4>
+              <h4>Full-Stack & AI Architect</h4>
               <p>
-                I architect scalable full-stack applications and secure Web3 platforms. By accelerating traditional workflows and leveraging AI coding tools (Claude, Gemini, OpenAI, etc.), I build robust systems up to 10x faster without compromising on modern architecture.
+                I design scalable full-stack applications and integrate cutting-edge AI models directly into software ecosystems. From distributed databases to intelligent LLM pipelines, I engineer robust, future-proof platforms capable of handling both heavy web traffic and complex data processing.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">System Architecture</div>
                 <div className="what-tags">Full Stack Development</div>
-                <div className="what-tags">AI Integrations</div>
+                <div className="what-tags">AI & LLM Pipelines</div>
                 <div className="what-tags">Web3 Solutions</div>
-                <div className="what-tags">Rapid Prototyping</div>
+                <div className="what-tags">Data Processing</div>
               </div>
             </div>
           </div>
@@ -124,18 +124,17 @@ const WhatIDo = () => {
               <h3>TECHNICAL</h3>
               <h4>Core Technologies</h4>
               <p>
-                Proficient in modern programming languages and state-of-the-art frameworks. I write clean, maintainable code focusing on highly optimized execution across the entire development stack.
+                Proficient in modern programming languages and state-of-the-art frameworks. I write clean, maintainable code focusing on highly optimized execution across the entire development stack and AI infrastructure.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">JavaScript/TypeScript</div>
                 <div className="what-tags">Python</div>
-                <div className="what-tags">C++</div>
                 <div className="what-tags">React & Next.js</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">SQL</div>
-                <div className="what-tags">Flask</div>
+                <div className="what-tags">MongoDB & SQL</div>
+                <div className="what-tags">PyTorch/TensorFlow</div>
+                <div className="what-tags">LangChain</div>
               </div>
             </div>
           </div>
