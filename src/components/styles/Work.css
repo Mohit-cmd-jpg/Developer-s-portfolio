@@ -23,15 +23,15 @@
   align-content: stretch;
 }
 .work-flex {
-  width: 100%;
+  width: 100vw;
   display: flex;
   height: auto;
-  margin-left: -80px;
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   padding-bottom: 15px;
+  box-sizing: border-box;
 }
 .work-box {
   padding: 80px;
