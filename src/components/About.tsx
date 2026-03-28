@@ -6,11 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          My journey into coding began out of a pure curiosity for how things work on the internet.
-          Today, I am an engineer focused on building robust, scalable applications and diving deep into Artificial Intelligence.
-          Currently in my third year pursuing a B.Tech in CSE, I specialize in combining modern web technologies like React and
-          Node.js with AI tools, LLMs, and Python. I thrive on translating complex problems into clean, efficient, and 
-          maintainable code while keeping the end-user experience front and center.
+          Driven by a deep curiosity for the digital world, I am a software engineer focused on architecting scalable web applications and cutting-edge AI solutions. Currently a third-year Computer Science student, I specialize in bridging modern frameworks like React and Node.js with advanced LLMs and Python. I thrive on translating complex challenges into clean, efficient code that prioritizes an exceptional end-user experience.
         </p>
       </div>
     </div>
