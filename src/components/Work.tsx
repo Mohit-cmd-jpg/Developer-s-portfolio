@@ -21,6 +21,37 @@ interface PinnedRepo {
   forks: number;
 }
 
+const getDynamicImage = async (owner: string, repo: string, defaultImage: string) => {
+  const cacheKey = `repo_img_${owner}_${repo}`;
+  const cached = sessionStorage.getItem(cacheKey);
+  if (cached) return cached;
+
+  try {
+    let res = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/main?recursive=1`);
+    if (res.status === 404 || res.status === 409) {
+      res = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/master?recursive=1`);
+    }
+    
+    if (res.ok) {
+      const data = await res.json();
+      const imageNode = data.tree?.find((file: any) => 
+        /(frontpage|dashboard)\.(png|jpg|jpeg|webp)$/i.test(file.path)
+      );
+
+      if (imageNode) {
+        const branch = res.url.includes('/master') ? 'master' : 'main';
+        const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${imageNode.path}`;
+        sessionStorage.setItem(cacheKey, imgUrl);
+        return imgUrl;
+      }
+    }
+  } catch (error) {
+    console.error("Error fetching dynamic repo image", error);
+  }
+  sessionStorage.setItem(cacheKey, defaultImage);
+  return defaultImage;
+};
+
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   return (
     <div className="work-box">
@@ -65,22 +96,18 @@ const Work = () => {
         const response = await fetch('https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=Mohit-cmd-jpg');
         const data: PinnedRepo[] = await response.json();
         
-const customImages: Record<string, string> = {
-          "University-Placement-Management-System": "https://raw.githubusercontent.com/Mohit-cmd-jpg/University-Placement-Management-System/main/docs/assets/screenshots/Frontpage.png",
-          "secure-file-sharing": "https://raw.githubusercontent.com/Mohit-cmd-jpg/secure-file-sharing/main/docs/images/Frontpage.png",
-          "hrms-lite": "https://raw.githubusercontent.com/Mohit-cmd-jpg/hrms-lite/main/public/screenshots/Dashboard.png"
-        };
-
-        const formattedProjects = data.map(repo => ({
-          title: repo.repo.replace(/-/g, ' '),
-          category: repo.language || "Open Source",
-          tools: repo.language || "Multiple",
-          desc: repo.description || "View repository for more details.",        
-          link: repo.website || repo.link,
-          github: repo.link,
-          website: repo.website,
-          image: customImages[repo.repo] || repo.image
-        }));
+        const formattedProjects = await Promise.all(
+          data.map(async (repo) => ({
+            title: repo.repo.replace(/-/g, ' '),
+            category: repo.language || "Open Source",
+            tools: repo.language || "Multiple",
+            desc: repo.description || "View repository for more details.",        
+            link: repo.website || repo.link,
+            github: repo.link,
+            website: repo.website,
+            image: await getDynamicImage(repo.owner, repo.repo, repo.image)
+          }))
+        );
         
         setProjects(formattedProjects);
       } catch (error) {
