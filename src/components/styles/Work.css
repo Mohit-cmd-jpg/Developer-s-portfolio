@@ -24,7 +24,6 @@
 }
 .work-flex {
   width: 100%;
-  min-width: fit-content;
   display: flex;
   height: auto;
   margin-left: -80px;
