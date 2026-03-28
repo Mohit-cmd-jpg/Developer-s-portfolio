@@ -10,8 +10,8 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:mohitbindal106@gmail.com" data-cursor="disable">
-                mohitbindal106@gmail.com
+              <a href="mailto:mohitbindal0786@gmail.com" data-cursor="disable">  
+                mohitbindal0786@gmail.com
               </a>
             </p>
             <h4>Phone</h4>
@@ -42,10 +42,10 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Mohit</span>      
+              Designed and Developed <br /> by <span>Mohit</span>
             </h2>
             <h5>
-              <MdCopyright /> 2026
+              <MdCopyright /> {new Date().getFullYear()}
             </h5>
           </div>
         </div>

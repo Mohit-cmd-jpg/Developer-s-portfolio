@@ -21,6 +21,40 @@ interface PinnedRepo {
   forks: number;
 }
 
+const ProjectCard = ({ project, index }: { project: any; index: number }) => {
+  return (
+    <div className="work-box">
+      <div className="work-info">
+        <div className="work-title">
+          <h3>0{index + 1}</h3>
+          <div>
+            <h4>{project.title}</h4>
+            <p>{project.category}</p>
+          </div>
+        </div>
+        <h4>Tools and features</h4>
+        <p>{project.tools}</p>
+        <p style={{ marginTop: '10px', fontSize: '0.9rem', color: '#ccc' }}>{project.desc}</p>
+        <div style={{ display: 'flex', gap: '15px', marginTop: '30px', flexWrap: 'wrap' }}>
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noreferrer" className="work-action-btn github-btn" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', borderRadius: '30px', fontSize: '14px', transition: 'all 0.3s ease', background: 'rgba(255,255,255,0.05)' }}>
+              <FaGithub size={18} /> GitHub
+            </a>
+          )}
+          {project.website && (
+            <a href={project.website} target="_blank" rel="noreferrer" className="work-action-btn live-btn" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#000', textDecoration: 'none', backgroundColor: '#fff', padding: '10px 20px', borderRadius: '30px', fontSize: '14px', transition: 'all 0.3s ease', fontWeight: 500 }}>
+              <FaExternalLinkAlt size={16} /> Live Demo
+            </a>
+          )}
+        </div>
+      </div>
+      <a href={project.link} target="_blank" rel="noreferrer" style={{display: 'block', height: '100%', width: '100%'}}>
+         <WorkImage image={project.image || "/images/placeholder.webp"} alt={project.title} />
+      </a>
+    </div>
+  );
+};
+
 const Work = () => {
   const [projects, setProjects] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -134,36 +168,7 @@ const Work = () => {
       </div>
       <div className="work-flex">
         {projects.map((project, index) => (
-            <div className="work-box" key={index}>
-              <div className="work-info">
-                <div className="work-title">
-                  <h3>0{index + 1}</h3>
-
-                  <div>
-                    <h4>{project.title}</h4>
-                    <p>{project.category}</p>
-                  </div>
-                </div>
-                <h4>Tools and features</h4>
-                <p>{project.tools}</p>
-                <p style={{ marginTop: '10px', fontSize: '0.9rem', color: '#ccc' }}>{project.desc}</p>
-                <div style={{ display: 'flex', gap: '15px', marginTop: '30px', flexWrap: 'wrap' }}>
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noreferrer" className="work-action-btn github-btn" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', borderRadius: '30px', fontSize: '14px', transition: 'all 0.3s ease', background: 'rgba(255,255,255,0.05)' }}>
-                      <FaGithub size={18} /> GitHub
-                    </a>
-                  )}
-                  {project.website && (
-                    <a href={project.website} target="_blank" rel="noreferrer" className="work-action-btn live-btn" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#000', textDecoration: 'none', backgroundColor: '#fff', padding: '10px 20px', borderRadius: '30px', fontSize: '14px', transition: 'all 0.3s ease', fontWeight: 500 }}>
-                      <FaExternalLinkAlt size={16} /> Live Demo
-                    </a>
-                  )}
-                </div>
-              </div>
-              <a href={project.link} target="_blank" rel="noreferrer" style={{display: 'block', height: '100%', width: '100%'}}>
-                 <WorkImage image={project.image || "/images/placeholder.webp"} alt={project.title} />
-              </a>
-            </div>
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
     </div>

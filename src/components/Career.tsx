@@ -45,7 +45,8 @@ const Career = () => {
               <h3>2023 - 2027</h3>
             </div>
             <p>
-              Current 3rd-year student with a CGPA of 8.7. Active member of the college tech club, participating in peer learning, workshops, and collaborative discussions on full-stack development and emerging AI technologies.
+              Current 3rd-year student with a CGPA of 8.7. Active member of the college tech club.
+              Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, and Artificial Intelligence.
             </p>
           </div>
           <div className="career-info-box">

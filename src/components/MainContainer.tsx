@@ -1,5 +1,6 @@
-import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import About from "./About";
+import Skills from "./Skills";
 import Career from "./Career";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
@@ -39,6 +40,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <Landing>{!isDesktopView && children}</Landing>
             <About />
             <WhatIDo />
+            <Skills />
             <Career />
             <Work />
             <Contact />
