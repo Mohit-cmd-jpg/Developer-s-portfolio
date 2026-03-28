@@ -11,24 +11,24 @@ const Loading = ({ percent }: { percent: number }) => {
   const [clicked, setClicked] = useState(false);
 
   if (percent >= 100) {
-    setTimeout(() => {
+    if (!loaded) {
       setLoaded(true);
       setTimeout(() => {
         setIsLoaded(true);
-      }, 1000);
-    }, 600);
+      }, 100);
+    }
   }
 
   useEffect(() => {
     import("./utils/initialFX").then((module) => {
-      if (isLoaded) {
+      if (isLoaded && !clicked) {
         setClicked(true);
         setTimeout(() => {
           if (module.initialFX) {
             module.initialFX();
           }
           setIsLoading(false);
-        }, 900);
+        }, 100);
       }
     });
   }, [isLoaded]);
