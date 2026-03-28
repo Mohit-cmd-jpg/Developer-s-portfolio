@@ -1,65 +1,44 @@
-# My Portfolio Website - Overview 🚀
+# Mohit's Developer Portfolio 🚀
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+![Portfolio Preview](./public/images/frontpage.png)
 
----
+Welcome to the repository for my personal developer portfolio! This is a high-performance web application designed to showcase my skills, open-source projects, and journey as a software engineer.
 
-## ⚠️ Usage Notice
+## 🌟 Overview
 
-This project is shared for learning purposes only.
+I built this platform to serve as a centralized hub for my work, including major projects like the **University Placement System**, **SecureShare**, and **HRMS Lite**. The design and architecture prioritize clean code, modern web technologies, and an exceptional end-user experience. Everything in this repository was custom-tailored by me to reflect my personal development journey.
 
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
+## 🚀 Tech Stack
 
-If you use parts of the code, you must provide proper credit linking back to the original repository.
+- **Frontend Framework:** React, Vite
+- **Language:** TypeScript, JavaScript
+- **Styling:** Modern CSS3, Flexbox/Grid, Custom CSS properties
+- **Animations:** Custom GSAP implementation
+- **Deployment:** Vercel
 
-Build your own version — don’t just copy.
+## 🛠️ Running Locally
 
-— Moncy Yohannan
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Mohit-cmd-jpg/Developer-s-portfolio.git
+   cd Developer-s-portfolio
+   ```
 
----
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## 🛠️ Instructions
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
+## 📬 Contact
 
----
-
-## ⚙️ Tech Stack
-
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
-
----
-
-## 🎨 Assets Usage
-
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
-
----
-
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
-
----
-
-## 📄 License
-
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+Feel free to explore my source code or reach out to me via my [GitHub Profile](https://github.com/Mohit-cmd-jpg).
