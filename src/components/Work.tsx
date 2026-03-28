@@ -34,7 +34,7 @@ const Work = () => {
     scrollTrigger: {
       trigger: ".work-section",
       start: "top top",
-      end: `+=${Math.max(translateX, 500)}`, // Ensure minimum scroll distance so pin spacer is created properly
+      end: `+=${Math.max(translateX, 1500)}`, // Ensure minimum scroll distance so pin spacer is created properly
       scrub: true,
       pin: true,
       id: "work",
