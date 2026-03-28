@@ -77,13 +77,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a data-href="#work" href="#work" onClick={() => setMenuOpen(false)}>
-                <HoverLinks text="WORK" />
+              <a data-href="#education" href="#education" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="EDUCATION" />
               </a>
             </li>
             <li>
-              <a data-href="#education" href="#education" onClick={() => setMenuOpen(false)}>
-                <HoverLinks text="EDUCATION" />
+              <a data-href="#work" href="#work" onClick={() => setMenuOpen(false)}>
+                <HoverLinks text="WORK" />
               </a>
             </li>
             <li>
