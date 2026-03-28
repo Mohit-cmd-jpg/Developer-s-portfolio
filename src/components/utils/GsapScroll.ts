@@ -145,8 +145,8 @@ export function setAllTimeline() {
   careerTimeline
     .fromTo(
       ".career-timeline",
-      { maxHeight: "10%" },
-      { maxHeight: "100%", duration: 0.5 },
+      { height: "10%" },
+      { height: "100%", duration: 1 },
       0
     )
 
