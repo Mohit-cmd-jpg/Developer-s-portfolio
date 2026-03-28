@@ -8,27 +8,31 @@
 }
 .work-section {
   transition: 0s;
-  height: 100vh;
   box-sizing: border-box;
-  will-change: transform;
-  margin-bottom: 500px;
+  will-change: auto;
+  margin-bottom: 100px;
   position: relative;
   z-index: 5;
+  padding: 100px 0;
 }
 .work-container {
   margin: auto;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   align-content: stretch;
 }
 .work-flex {
   width: 100%;
   display: flex;
-  height: 100%;
+  height: auto;
   margin-left: -80px;
   padding-right: 120px;
   position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 15px;
 }
 .work-box {
   padding: 80px;

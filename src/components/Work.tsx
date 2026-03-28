@@ -8,50 +8,24 @@ gsap.registerPlugin(useGSAP);
 
 const Work = () => {
   useGSAP(() => {
-  let translateX: number = 0;
-
-  function setTranslateX() {
-    const box = document.getElementsByClassName("work-box");
-    if (!box || box.length === 0) return;
-    const rectLeft = document
-      .querySelector(".work-container")!
-      .getBoundingClientRect().left;
-    const rect = box[0].getBoundingClientRect();
-    const parentWidth = box[0].parentElement!.getBoundingClientRect().width;    
-    let padding: number =
-      parseInt(window.getComputedStyle(box[0]).padding) / 2;
-    translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;  
+    // Just trigger scroll animations, but let the browser handle natural scrolling
+    gsap.registerPlugin(ScrollTrigger);
     
-    // Fallback if the items fit on the screen without scrolling
-    if (translateX < 0) {
-      translateX = 0;
-    }
-  }
-
-  setTranslateX();
-
-  let timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".work-section",
-      start: "top top",
-      end: `+=${Math.max(translateX, 1500)}`, // Ensure minimum scroll distance so pin spacer is created properly
-      scrub: true,
-      pin: true,
-      id: "work",
-    },
-  });
-
-  if (translateX > 0) {
-    timeline.to(".work-flex", {
-      x: -translateX,
-      ease: "none",
+    const section = document.querySelector(".work-section");
+    if (!section) return;
+    
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        id: "work",
+      },
     });
-  }
-  return () => {
-    timeline.kill();
-    ScrollTrigger.getById("work")?.kill();
-  };
-}, []);
+
+    return () => {
+      ScrollTrigger.getById("work")?.kill();
+    };
+  }, []);
   const projects = [
     {
       title: "SecureShare",
